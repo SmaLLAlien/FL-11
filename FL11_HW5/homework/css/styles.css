@@ -1,0 +1,576 @@
+body, html, body, div, a, ol, ul, li, h2 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: roboto;
+    font-size: 16px;
+    background: #0b192f;
+}
+.wrapper {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1400px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #162b4d;
+    margin-bottom: 25px;
+
+}
+.humburger {
+    width: 1px;
+    height: 1px;
+}
+.logo {
+    color: white;
+    align-self: center;
+    font-size: 2.7em;
+    text-transform: capitalize;
+    font-weight: 200;
+    margin-left: 30px;
+}
+.logo span {
+    color: #d12767;
+
+}
+.navigation {
+    margin-right: 3.571428571%;
+    align-self: center;
+    width: 50%;
+
+
+}
+.navigation-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width:70%;
+    margin-left:  auto;
+
+}
+.navigation-item {
+    padding-top: 40px ;
+    padding-bottom: 40px ;
+    width: 25%;
+}
+.navigation-item:hover {
+    background: #b8b8b8;
+}
+
+.navigation-item a {
+    display: block;
+    width: 100%;
+   text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.main-content {
+
+    margin-right: 25px;
+    width: 75%;
+}
+
+.aside-blogs {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+.blog {
+    width: 100%;
+    margin-bottom: 25px;
+    background: #fff;
+}
+
+.blog-img {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.blog-img img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.aside-blogs .blog-header {
+    font-size: 1.8em;;
+    font-weight: 300;
+    padding: 0 13.571428571%;
+    margin-bottom: 20px;
+    color: #000;
+}
+.blog-text {
+    padding: 0 13.571428571%;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #817aa1;
+    margin-bottom: 55px;
+}
+
+.cards {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+}
+.card-img {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.card-img img {
+    max-width: 100%;
+    width: 101%;
+    height: 101%;
+}
+
+.card-description {
+    box-sizing: border-box;
+    width: 50%;
+    color: #f5f5f5;
+    padding: 0 5%;
+    padding-top: 40px;
+    position: relative;
+}
+
+.description-header {
+    font-weight: 200;
+    font-size: 3.1em;
+    letter-spacing: 3px;
+    width: 75%;
+    margin-bottom: 25px;
+}
+.description-text {
+    font-weight: 200;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-right: 10%;
+}
+
+.card:first-child  .card-description {
+    background: #B71757;
+}
+
+.card:nth-child(2)  .card-description {
+    background: #0D7E71;
+}
+.card:nth-child(3)  .card-description {
+    background: #b1660e;
+}
+.card:nth-child(4)  .card-description {
+    background: #d12767;
+}
+
+.card:nth-child(even) .card-img{
+    order: 2;
+}
+
+.card:nth-child(even) .card-description{
+    order: 1;
+    text-align: right;
+    padding-right: 0;
+    padding-left: 10%;
+}
+.card:nth-child(even) .description-header {
+    text-align: right;
+    margin-left: auto;
+    padding-right: 10%;
+}
+time {
+    position: absolute;
+    color: #f5f5f5;
+    font-size: 3.5em;
+    font-weight: 200;
+    text-align: center;
+    width: 55px;
+}
+.card:nth-child(even) time {
+    top: 3%;
+    left: 2%;
+}
+.card:nth-child(odd) time {
+    top: 3%;
+    right: 2%;
+}
+time span {
+    display: block;
+    font-size: 0.5em;
+    text-align: center;
+}
+.card-description::after,
+.card-img::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-description:hover::after,
+.card-img:hover::after {
+    width: 100%;
+    height: 100%;
+}
+.card:first-child .card-description:hover::after,
+.card:first-child .card-img:hover::after {
+    background: rgba(183, 23, 87, 0.5);
+}
+.card:nth-child(2) .card-description:hover::after,
+.card:nth-child(2) .card-img:hover::after {
+    background: rgba(13, 126, 113, 0.5);
+}
+.card:nth-child(3) .card-description:hover::after,
+.card:nth-child(3) .card-img:hover::after {
+    background: rgba(177, 102, 14, 0.5);
+}
+.card:nth-child(4) .card-description:hover::after,
+.card:nth-child(4) .card-img:hover::after {
+    background: rgba(209, 39, 103, 0.5);
+}
+
+
+.main-summary {
+    padding: 40px 5%;
+    color: #fff;
+    background: #2d95bb;
+    position: relative;
+}
+.main-summary time {
+    top: 3%;
+    right: 2%;
+}
+
+.summary-header {
+    font-weight: 200;
+    font-size: 3.1em;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+.summary-text {
+    font-weight: 200;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #f5f5f5;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #f5f5f5;
+    padding: 20px 3%;
+    font-weight: 200;
+    background: #162b4d;
+    box-sizing: border-box;
+}
+.footer-left {
+    font-size: 1.1em;
+}
+.footer-right {
+    font-size: 1.1em;
+    width: 12%;
+    align-self: center;
+}
+@media all and (max-width: 1400px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .header {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 200px;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+    }
+    .navigation {
+        display: none;
+    }
+    .humburger {
+        width: 13px;
+        height: 10px;
+        align-self: center;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        cursor: pointer;
+    }
+    .humburger div{
+        width: 13px;
+        height: 1px;
+        background-color: white;
+        margin: 3px 0;
+    }
+    .logo {
+        font-size: 3em;
+        margin-left: 0;
+    }
+    .main-content {
+        width: 57%;
+        margin-right: 15px;
+    }
+    .aside-blogs {
+        width: 41%;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card-img {
+        width: 100%;
+    }
+    .card-description {
+        width: 100%;
+    }
+    .aside-blogs {
+        margin-bottom: 15px;
+    }
+    .blog {
+        margin-bottom: 15px;
+    }
+    .blog-img {
+        margin-bottom: 20px;
+    }
+    .aside-blogs .blog-header {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+    .blog-text {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    .card-description {
+        font-size: 1.6em;
+        padding-top: 30px;
+    }
+    .description-header {
+        width: 95%;
+        margin-bottom: 0;
+    }
+    .description-text {
+        margin-top: 10px;
+        margin-bottom: 110px;
+
+    }
+    .card:nth-child(even) .card-img{
+        order: 1;
+    }
+    .card:nth-child(even) .card-description{
+        order: 2;
+        text-align: left;
+        padding-right: 5%;
+    }
+    .card:nth-child(even) .description-header {
+        text-align: left;
+        padding-right: 5%;
+        margin-left: 0;
+    }
+    .card:nth-child(odd) .card-description{
+        text-align: left;
+        padding-left: 10%;
+    }
+    .card:nth-child(odd) .description-header {
+        text-align: left;
+    }
+    time {
+        font-size: 2.5em;
+    }
+    .card:nth-child(even) time {
+        top: 75%;
+        left: 45%;
+    }
+    .card:nth-child(odd) time {
+        top: 75%;
+        left: 45%;
+    }
+    .main-summary {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 40px;
+    }
+    .summary-text {
+        font-size: 1.6em;
+        margin-bottom: 70px;
+    }
+    .summary-header {
+        font-size: 4em;
+    }
+    .main-summary time {
+        top: 75%;
+        left: 45%;
+        font-size: 4em;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .footer-left {
+        font-size: 1.375em;
+        text-align: center;
+    }
+    .footer-left p {
+        margin: 5px 0;
+    }
+    .footer-right {
+        font-size: 1.375em;
+        width: 18%;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .wrapper {
+        padding: 0 7px;
+        box-sizing: border-box;
+    }
+    .aside-blogs .blog-header {
+        padding: 0 6.571428571%;
+        font-size: 2.5em;
+    }
+    .blog-text {
+        padding: 0 6.571428571%;
+        margin-bottom: 27px;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .main-content {
+        width: 100%;
+    }
+    .aside-blogs {
+        width: 100%;
+    }
+    .card-description {
+        margin-top: -0.7%;
+        padding-bottom: 70px;
+    }
+    .description-header {
+        width: 100%;
+        font-size: 2.8em;
+    }
+    .description-text {
+        padding-right: 0;
+    }
+    .main-summary {
+        padding-right: 5%;
+    }
+    .summary-header {
+        font-size: 4em;
+    }
+    .summary-text {
+        padding-bottom: 70px;
+    }
+    .footer-right {
+        font-size: 1.375em;
+        width: 30%;
+        text-align: center;
+    }
+}
+@media all and (max-width: 1250px) {
+    .description-header,
+    .summary-header {
+        font-size: 2.5em;
+    }
+    .description-header {
+        width: 60%;
+    }
+    .description-text,
+    .summary-text,
+    .footer-right {
+        font-size: 1em;
+    }
+    .aside-blogs .blog-header {
+        font-size: 1.6em;
+    }
+    .blog-text {
+        font-size: 0.8em;
+    }
+    .footer-right,
+    .footer-left {
+        font-size: 1em;
+    }
+    time {
+        font-size: 3em;
+    }
+}
+
+@media all and (max-width: 1050px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 950px) {
+    body {
+        font-size: 12px;
+    }
+}
+@media all and (max-width: 850px) {
+    body {
+        font-size: 11px;
+    }
+}
+@media all and (min-width: 480px) and (max-width: 750px) {
+    .description-header {
+        width: 100%;
+        font-size: 2.4em;
+    }
+    .summary-header {
+        font-size: 3.5em;
+    }
+}
+@media all and (min-width: 480px) and (max-width: 680px) {
+    .description-header {
+        width: 100%;
+        font-size: 2em;
+    }
+    .summary-header {
+        font-size: 3em;
+    }
+    .summary-text {
+        font-size: 1.4em;
+    }
+}
+@media all and (min-width: 480px) and (max-width: 585px) {
+    time {
+        font-size: 2.2em;
+    }
+    .card:nth-child(even) time {
+        top: 80%;
+        left: 45%;
+    }
+    .card:nth-child(odd) time {
+        top: 80%;
+        left: 45%;
+    }
+    .main-summary time {
+        top: 80%;
+        left: 45%;
+        font-size: 3.5em;
+    }
+}
