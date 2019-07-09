@@ -43,6 +43,7 @@ Attempts left: ${attemptCounter}\nTotal prize: ${totalPrize}$\nPossible prize on
             attemptPrize = attemptPrize * correctionPrizeCount * doubleIt;
             range += rangeStep;
             correctionPrizeCount = 1;
+			randomNumber = Math.floor(Math.random() * range);
           } else {
             alert(`Thank you for your participation. Your prize is: ${totalPrize}`);
             nextAgainFlag = true;
