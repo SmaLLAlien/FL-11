@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    color: #1d88ff;
+    font-size: 16px;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+#root {
+   box-sizing: border-box;
+    width: 40%;
+}
+
+.header {
+    text-align: center;
+}
+.action_input {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.write_action {
+    width: 80%;
+    font-size: 1.2em;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    outline: none;
+    line-height: 1.5em;
+    padding-left: 10px;
+}
+.write_action::placeholder {
+    font-size: 0.8em;
+    color: lightgray;
+}
+.write_action:focus {
+    border: 1px solid #7ec9f8;
+}
+.add_action {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #7ec9f8;
+}
+.add_action > i {
+    font-size: 3.5em;
+    user-select: none;
+}
+.color_disabled {
+    color: grey;
+    cursor: none;
+}
+hr {
+    border-top: 3px solid #e9f6ff;
+}
+.check_list {
+    padding: 10px;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: flex-start;
+}
+.check_item {
+    display: none;
+}
+label {
+    position: relative;
+}
+.text_action::before {
+    content: "\2713";
+    color: #fff;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    display: inline-block;
+    border-radius: 3px;
+    top: 1px;
+    left: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 20px;
+
+}
+.check_item:checked + .text_action::before {
+    content: "\2713";
+    display: inline-block;
+    position: absolute;
+    background: transparent;
+    border-radius: 2px;
+    color: #1d88ff;
+    transition: color 0.5s;
+}
+.text_action {
+
+    margin-left: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.icon_create {
+    display: inline-block;
+    font-size: 1.4em;
+    vertical-align: middle;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.icon_delete {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto;
+}
+.notify_end_list {
+    background: #ffc107;
+    border-radius: 5px;
+    font-size: 0.6em;
+    padding: 5px;
+    width: 60%;
+    margin: 10px auto;
+    color: rgb(84,84,84);
+}
+.edit {
+    display: none;
+    margin: 10px;
+    margin-left: 0;
+}
+.edit_input {
+    font-size: 1.3em;
+    line-height: 30px;
+    color: #1d88ff;
+    border: 1px solid #ccc;
+    width: 50%;
+    outline: none;
+}
+.edit_input:focus {
+    border: 1px solid #7ec9f8;
+}
+.icon_save {
+   vertical-align: middle;
+    font-size: 1.9em;
+    margin-left: 10px;
+}
+
+.user_item {
+    display: none;
+}
