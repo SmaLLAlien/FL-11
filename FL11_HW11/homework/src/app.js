@@ -9,9 +9,10 @@ const USERLIST = ROOTNODE.querySelector('.user_list');
 const CHECKLISTCOLLECT = ROOTNODE.getElementsByClassName('user_item');
 let checkDisabledInput = false;
 WRITEACTIONINPUT.addEventListener('input', checkInputValue);
+let maxItem = 11;
 
 function checkInputValue() {
-  if(WRITEACTIONINPUT.value.length >= 1) {
+  if(WRITEACTIONINPUT.value.trim().length >= 1) {
     addIconActivating(ADDBOX);
   } else {
     addIconDisabling(ADDBOX);
@@ -25,19 +26,12 @@ function addNewList() {
   temp.querySelector('.check_item').disabled = false;
   temp.firstElementChild.style.textDecoration = '';
   temp.style.display = 'block';
-  temp.querySelector('.icon_create').addEventListener('click', openEdit);
-  temp.querySelector('.check_item').addEventListener('change', markChecked);
-  temp.querySelector('.icon_delete').addEventListener('click', deleteItem);
-  temp.querySelector('.icon_save').addEventListener('click', saveEdit);
-  temp.setAttribute('draggable', 'true');
-  temp.addEventListener('dragover', allowDrop);
-  temp.addEventListener('dragstart', handleDragStart, false);
-  temp.addEventListener('drop', handleDrop, false);
+  addListeners(temp);
 
   USERLIST.insertBefore(temp, USERLIST.firstChild);
   WRITEACTIONINPUT.value = '';
   checkInputValue();
-  if(CHECKLISTCOLLECT.length >= 11) {
+  if(CHECKLISTCOLLECT.length >= maxItem) {
     checkDisabledInput = true;
     addIconDisabling(ADDBOX);
     notifying();
@@ -45,7 +39,7 @@ function addNewList() {
 }
 function deleteItem(event) {
   event.target.parentElement.parentElement.remove();
-  if(checkDisabledInput && CHECKLISTCOLLECT.length < 11) {
+  if(checkDisabledInput && CHECKLISTCOLLECT.length < maxItem) {
     addIconActivating(ADDBOX);
     WRITEACTIONINPUT.disabled = false;
     NOTIFYENDLIST.remove();
@@ -113,9 +107,23 @@ function handleDrop(event) {
   if (dragSrcEl !== this) {
     dragSrcEl.innerHTML = this.innerHTML;
     this.innerHTML = event.dataTransfer.getData('text/html');
+    addListeners(this);
+    addListeners(dragSrcEl);
   }
   return false;
 }
+
 function allowDrop(event) {
   event.preventDefault();
+}
+
+function addListeners(element) {
+  element.querySelector('.icon_create').addEventListener('click', openEdit);
+  element.querySelector('.check_item').addEventListener('change', markChecked);
+  element.querySelector('.icon_delete').addEventListener('click', deleteItem);
+  element.querySelector('.icon_save').addEventListener('click', saveEdit);
+  element.setAttribute('draggable', 'true');
+  element.addEventListener('dragover', allowDrop);
+  element.addEventListener('dragstart', handleDragStart, false);
+  element.addEventListener('drop', handleDrop, false);
 }
