@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div id="root">
+    <div class="task_wrapper">
+      <div class="task">
+        <h1 class="header">Simple TODO application</h1>
+        <button class="task_new">Add new task</button>
+      </div>
+      <ul class="task_unchecked">
+        <li class="unchecked">
+          <div class="inside_wrapper">
+            <div class="unchecked_image"><img class="imageUnCheck" src="assets/img/todo-s.png" alt="todo"></div>
+            <div class="unchecked_text">acc</div>
+            <div class="cancel_img"><img class="remove" src="assets/img/remove-s.jpg" alt="remove" /></div>
+          </div>
+        </li>
+
+      </ul>
+      <ul class="task_checked">
+        <li class="unchecked">
+          <div class="inside_wrapper">
+            <div class="unchecked_image"><img class="imageCheck" src="assets/img/todo-s.png" alt="todo"></div>
+            <div class="unchecked_text">bff</div>
+            <div class="cancel_img"><img src="assets/img/remove-s.jpg" alt="remove" /></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="add__wrapper">
+      <div class="task_add">
+        <h2 class="modify_header">Modify item</h2>
+        <h2 class="add_header">Add task</h2>
+        <input type="text" name="add" class="add_input" />
+        <div class="add_buttons">
+          <button class="add_cancel">Cancel</button>
+          <button class="add_save">Save changes</button>
+          <button class="modify_save">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 16px;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header,
+.add_header,
+.modify_header {
+    margin-top: 50px;
+    color: #1d88ff;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.task_new {
+    color: #1d88ff;
+    padding: 10px 15px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+ /*LIST UNCHECKED*/
+.task_unchecked,
+.task_checked {
+    width: 100%;
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+.unchecked {
+    width: 100%;
+    display: none;
+}
+.inside_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.unchecked_image,
+.cancel_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.unchecked_image img,
+.cancel_img img {
+    width: 60%;
+}
+.unchecked_text {
+    width: 100%;
+    text-align: center;
+}
+.task_add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ADD */
+.add__wrapper {
+    width: 100%;
+    display: none;
+}
+.add_input {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5em;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    color: #1d88ff;
+}
+.add_buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.add_cancel,
+.add_save,
+.modify_save {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.task_new:active,
+.add_cancel:active,
+.add_save:active,
+.modify_save:active {
+    transform: translateY(2px);
+}
+
+    /* MODIFY */
+.modify_header {
+    display: none;
+}
+.modify_save {
+    display: none;
+}
+
+/* INFO */
+.info {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    box-sizing: border-box;
+}
+.info_wrapper {
+    background: #F00;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    position: relative;
+}
+.info_header {
+    font-size: 1em;
+}
+.info_text {
+    font-size: 0.8em;
+}
+.exit {
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exit_one,
+.exit_two {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+}
+.exit_one {
+    transform: rotate(45deg);
+}
+.exit_two {
+    transform: rotate(-45deg);
+}
