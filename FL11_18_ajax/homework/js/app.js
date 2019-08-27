@@ -114,7 +114,6 @@ class Data{
         return item;
       });
     }
-    console.log(this.usersArr);
   }
 
   async getCats() {
@@ -360,7 +359,6 @@ function save(event) {
   } else {
     let newObj = newPrintedUser.buildUser(ul);
     newData.put(newObj);
-    console.log(newObj);
   }
 
   ul.addEventListener('click', openEdit);
