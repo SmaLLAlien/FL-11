@@ -1,0 +1,159 @@
+p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.animation {
+    width: 48px;
+    height: 48px;
+    background: url('../img/ajax-loader.gif') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.user_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+.user {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.user_item {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.user_item:first-child {
+    background: lightskyblue;
+    border-radius: 5px;
+}
+.user_edit {
+    width: 100%;
+    background: lightgray;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.user_avatar {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-left: 100px;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid gainsboro;
+}
+.save,
+.return {
+    background: #ffc107;
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.input_edit {
+    margin: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 1px solid lightskyblue;
+    outline: none;
+    border-radius: 5px;
+    line-height: 1.5em;
+    padding-left: 5px;
+}
+.user_delete {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background: red;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.delete:first-child {
+     transform: rotate(45deg);
+}
+.delete:last-child {
+    transform: rotate(-45deg);
+}
+.delete {
+    position: absolute;
+    transform: rotate(45deg);
+    height: 2px;
+    width: 90%;
+    background: white;
+    transform-origin: 50% 50%;
+}
+.div {
+    display: none;
+}
+.user_postpage {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.user_posts {
+    display: flex;
+    flex-direction: column;
+}
+.onepost {
+    margin: 20px;
+    border: 1px dashed black;
+}
+.post_title {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+.post_body {
+    padding: 10px;
+}
+.user_comments {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+.comments_header {
+    display: flex;
+    justify-content: space-between;
+    background: lightgray;
+    padding: 10px;
+}
+.comments_body {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.return {
+    width: 150px;
+    padding: 20px;
+    align-self: center;
+    cursor: pointer;
+}
